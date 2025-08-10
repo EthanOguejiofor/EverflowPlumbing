@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everflow Plumbing Services | Silver Spring, MD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-blue-800 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tools text-2xl text-blue-300"></i>
+                <a href="#" class="text-2xl font-bold">Everflow <span class="text-blue-300">Plumbing</span></a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-300 font-medium">Home</a>
+                <a href="#services" class="hover:text-blue-300 font-medium">Services</a>
+                <a href="#about" class="hover:text-blue-300 font-medium">About Us</a>
+                <a href="#testimonials" class="hover:text-blue-300 font-medium">Testimonials</a>
+                <a href="#contact" class="hover:text-blue-300 font-medium">Contact</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="tel:3014480208" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full font-medium flex items-center">
+                    <i class="fas fa-phone mr-2"></i> (301) 448-0208
+                </a>
+            </div>
+            
+            <button class="md:hidden text-2xl" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-blue-900 w-full py-4 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-blue-300">Home</a>
+                <a href="#services" class="hover:text-blue-300">Services</a>
+                <a href="#about" class="hover:text-blue-300">About Us</a>
+                <a href="#testimonials" class="hover:text-blue-300">Testimonials</a>
+                <a href="#contact" class="hover:text-blue-300">Contact</a>
+                <a href="tel:3014480208" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full font-medium text-center">
+                    <i class="fas fa-phone mr-2"></i> (301) 448-0208
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Reliable Plumbing Services in Silver Spring</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Family-owned and operated with over 10 years of experience. Quality workmanship you can trust.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full font-bold text-lg">Get a Free Estimate</a>
+                <a href="tel:3014480208" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-800 px-8 py-4 rounded-full font-bold text-lg">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Banner -->
+    <div class="bg-red-600 text-white py-3">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-2 md:mb-0">
+                <i class="fas fa-exclamation-triangle text-2xl mr-3"></i>
+                <span class="font-bold">24/7 Emergency Services Available</span>
+            </div>
+            <a href="tel:3014480208" class="font-bold hover:underline">
+                <i class="fas fa-phone mr-2"></i> Call Now: (301) 448-0208
+            </a>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">Our Plumbing Services</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">We provide comprehensive plumbing solutions for both residential and commercial properties in Silver Spring and surrounding areas.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="https://nicholson-hvac.com/wp-content/uploads/2022/10/Water-Leak-Pipe-Sink-Detection-Repair-Professional.jpg" alt="Leak repair" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-tint text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">Leak Repair</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Fast and reliable leak detection and repair services to prevent water damage and save you money on your water bill.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="https://www.snellheatingandair.com/wp-content/uploads/Drain-Clearing.jpg" alt="Drain cleaning" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-shower text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">Drain Cleaning</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Professional drain cleaning and unclogging services using state-of-the-art equipment to keep your pipes flowing smoothly.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="data:image/jpeg;base64,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" alt="Water heater" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-fire text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">Water Heater Services</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Installation, repair, and maintenance of all types of water heaters to ensure you always have hot water when you need it.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Pipe repair" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-pipe text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">Pipe Repair & Replacement</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Expert pipe repair and replacement services using the latest techniques and materials for long-lasting results.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="https://schraderplumbing.com/wp-content/uploads/2021/06/Sewer-Line-Installation.jpg" alt="Sewer line" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-toilet text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">Sewer Line Services</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive sewer line inspection, cleaning, repair, and replacement to keep your home's wastewater flowing properly.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Emergency plumbing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">Emergency Plumbing</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">24/7 emergency plumbing services for those unexpected disasters that can't wait until morning.</p>
+                        <a href="#contact" class="text-blue-600 font-medium hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold inline-block">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Everflow Plumbing?</h2>
+                <div class="w-24 h-1 bg-blue-300 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-blue-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-3xl text-blue-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">10+ Years Experience</h3>
+                    <p class="text-blue-100">Our team brings over a decade of plumbing expertise to every job, big or small.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-tie text-3xl text-blue-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Licensed & Insured</h3>
+                    <p class="text-blue-100">All our plumbers are fully licensed, insured, and background checked for your peace of mind.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-thumbs-up text-3xl text-blue-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">100% Satisfaction Guarantee</h3>
+                    <p class="text-blue-100">We stand behind our work and won't rest until you're completely satisfied.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-dollar-sign text-3xl text-blue-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Upfront Pricing</h3>
+                    <p class="text-blue-100">No hidden fees or surprises - just honest, transparent pricing for all our services.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-3xl text-blue-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Prompt Service</h3>
+                    <p class="text-blue-100">We value your time and arrive on schedule, ready to work.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-blue-700 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-3xl text-blue-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Family-Owned</h3>
+                    <p class="text-blue-100">As a local, family-owned business, we treat every customer like family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Everflow Plumbing team" class="rounded-lg shadow-lg w-full">
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-800">About Everflow Plumbing</h2>
+                    <div class="w-24 h-1 bg-blue-600 mb-6"></div>
+                    
+                    <p class="text-gray-600 mb-4">Founded in 2013, Everflow Plumbing Services is a family-owned and operated plumbing company serving Silver Spring, Maryland and surrounding communities.</p>
+                    
+                    <p class="text-gray-600 mb-4">What started as a small operation with just one truck has grown into a trusted local business with a team of skilled plumbers dedicated to providing exceptional service.</p>
+                    
+                    <p class="text-gray-600 mb-6">We take pride in our work and believe in treating every customer with respect and honesty. When you call Everflow Plumbing, you're not just getting a plumber - you're getting a partner who genuinely cares about solving your plumbing problems.</p>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Our Mission</h3>
+                        <p class="text-gray-600">To provide reliable, high-quality plumbing services with integrity, professionalism, and a commitment to customer satisfaction that keeps our neighbors coming back year after year.</p>
+                    </div>
+                    
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold inline-flex items-center">
+                        Meet Our Team <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">What Our Customers Say</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Everflow Plumbing saved us from a major disaster when our water heater burst at 10pm. They arrived within 30 minutes and had the situation under control quickly. Professional, knowledgeable, and reasonably priced. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-800 font-bold">JD</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-800">James D.</h4>
+                            <p class="text-gray-500 text-sm">Silver Spring, MD</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I've used Everflow for several plumbing issues in my home over the years. They always do excellent work at fair prices. What I appreciate most is their honesty - they've actually talked me out of unnecessary repairs before!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-800 font-bold">SM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-800">Sarah M.</h4>
+                            <p class="text-gray-500 text-sm">Takoma Park, MD</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The team at Everflow installed a new bathroom in our home and did an amazing job. They were clean, respectful of our space, and finished ahead of schedule. The quality of their work is outstanding - it's been 2 years with zero issues."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-800 font-bold">TR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-800">Thomas R.</h4>
+                            <p class="text-gray-500 text-sm">Kensington, MD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.yelp.com/biz/everflow-plumbing-services-silver-spring" class="text-blue-600 font-bold hover:underline">Read More Reviews <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="py-16 bg-blue-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">Our Service Area</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">We proudly serve Silver Spring and surrounding communities in Maryland.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Cities We Serve:</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Silver Spring</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Rockville</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Bethesda</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Takoma Park</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Kensington</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Chevy Chase</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Wheaton</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                <span>Colesville</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.715010978333!2d-77.02626992404037!3d39.04367547163338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97c93d073e1%3A0x4d5621c2103ef489!2sSilver%20Spring%2C%20MD!5e0!3m2!1sen!2sus!4v1714933758730!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-800">Contact Everflow Plumbing</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">Have a plumbing issue or question? Reach out to us today - we're happy to help!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <div class="bg-blue-50 p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Get in Touch</h3>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-800">Phone</h4>
+                                    <a href="tel:3014480208" class="text-gray-600 hover:text-blue-600">(301) 448-0208</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-800">Email</h4>
+                                    <a href="mailto:info@everflowplumbing.com" class="text-gray-600 hover:text-blue-600">info@everflowplumbing.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-800">Service Area</h4>
+                                    <p class="text-gray-600">Silver Spring, MD and surrounding communities</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="font-bold text-blue-800 mb-3">Business Hours</h4>
+                        <div class="mb-6">
+                            <div class="flex justify-between py-2 border-b border-blue-200">
+                                <span class="text-gray-600">Monday - Friday</span>
+                                <span class="font-medium">8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-blue-200">
+                                <span class="text-gray-600">Saturday</span>
+                                <span class="font-medium">9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between py-2">
+                                <span class="text-gray-600">Sunday</span>
+                                <span class="font-medium">Emergency Only</span>
+                            </div>
+                        </div>
+                        
+                        <h4 class="font-bold text-blue-800 mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-red-600 hover:bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-yelp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Request a Free Estimate</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name*</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email*</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone*</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Service Needed*</label>
+                                <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                    <option value="">Select a service</option>
+                                    <option value="leak-repair">Leak Repair</option>
+                                    <option value="drain-cleaning">Drain Cleaning</option>
+                                    <option value="water-heater">Water Heater Services</option>
+                                    <option value="pipe-repair">Pipe Repair/Replacement</option>
+                                    <option value="sewer">Sewer Line Services</option>
+                                    <option value="emergency">Emergency Plumbing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency CTA Banner -->
+    <div class="bg-red-600 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-2">Need Emergency Plumbing Help?</h3>
+            <p class="mb-4 text-lg">We're available 24/7 for all plumbing emergencies</p>
+            <a href="tel:3014480208" class="bg-white hover:bg-gray-100 text-red-600 font-bold px-8 py-3 rounded-full inline-block">
+                <i class="fas fa-phone mr-2"></i> Call Now: (301) 448-0208
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tools text-2xl text-blue-400"></i>
+                        <span class="text-2xl font-bold">Everflow <span class="text-blue-400">Plumbing</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Family-owned and operated plumbing services in Silver Spring, MD with over 10 years of experience.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-blue-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-blue-400">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Leak Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Drain Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Water Heater Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pipe Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Emergency Plumbing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-blue-400">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-2 mt-1"></i>
+                            <span class="text-gray-400">Silver Spring, MD 20905</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-2"></i>
+                            <a href="tel:3014480208" class="text-gray-400 hover:text-white">(301) 448-0208</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                            <a href="mailto:info@everflowplumbing.com" class="text-gray-400 hover:text-white">info@everflowplumbing.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-blue-400 mr-2"></i>
+                            <span class="text-gray-400">24/7 Emergency Service</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Everflow Plumbing Services. All rights reserved.</p>
+                <p class="mt-2 text-sm">Licensed, Bonded & Insured | MD License #123456</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button (Mobile) -->
+    <div class="fixed bottom-6 right-6 md:hidden z-50">
+        <a href="tel:3014480208" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg animate-bounce">
+            <i class="fas fa-phone text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('block');
+            } else {
+                menu.classList.remove('block');
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('block');
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission (example)
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your request! We will contact you shortly.');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
